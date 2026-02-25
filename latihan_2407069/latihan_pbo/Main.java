@@ -1,22 +1,20 @@
 package latihan_pbo;
 
 class Cafe {
-    String nama;
-    String alamat;
+    private String nama;
+    private String alamat;
 
-    // constructor
+    // Constructor
     Cafe(String nama, String alamat) {
         this.nama = nama;
         this.alamat = alamat;
-        System.out.println("nama cafenya adalah : " + nama);
-        System.out.println("alamatnya di : " + alamat);
-        System.out.println("====================");
     }
 
-    // method
+    // Method
     void buka() {
+        System.out.println("Cafe " + nama + " sudah buka!");
+        System.out.println("Alamat: " + alamat);
         System.out.println("====================");
-        System.out.println("Cafe Sudah Buka");
     }
 
     public String getNama() {
@@ -38,8 +36,14 @@ class Cafe {
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("=== DAFTAR CAFE ===\n");
+
         Cafe cafe1 = new Cafe("Kenangan", "IMKOT");
         Cafe cafe2 = new Cafe("Janji Jiwa", "Cirebon");
-        Cafe cafe3 = new Cafe("kopi", "Indramayu");
+        Cafe cafe3 = new Cafe("Kopi Lain Hati", "Indramayu");
+
+        cafe1.buka();
+        cafe2.buka();
+        cafe3.buka();
     }
 }
