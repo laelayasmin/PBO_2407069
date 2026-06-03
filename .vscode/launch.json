@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "latihan_pbo8.Main",
+            "projectName": "PBO_2407069_99bbdad6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "latihan_mandiri.Main",
+            "projectName": "PBO_2407069_99bbdad6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "latihan_pbo7.Main",
+            "projectName": "PBO_2407069_99bbdad6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Latihan_PBO5.Main",
             "projectName": "PBO_2407069_99bbdad6"
         },

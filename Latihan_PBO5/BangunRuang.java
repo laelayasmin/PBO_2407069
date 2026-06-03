@@ -2,17 +2,24 @@ package Latihan_PBO5;
 
 public class BangunRuang extends BangunDatar {
 
-    // Atribut tambahan
     private double tinggi;
 
-    // Constructor: panggil constructor parent dengan super()
+    // super() → memanggil constructor parent
     public BangunRuang(double panjang, double lebar, double tinggi) {
-        super(panjang, lebar); // memanggil constructor BangunDatar
+        super(panjang, lebar);   // ← memanggil BangunDatar(panjang, lebar)
         this.tinggi = tinggi;
     }
 
-    // Method hitungVolume: REUSE hitungLuas() dari parent
+    public double getTinggi() { return tinggi; }
+
+    // @Override → menimpa hitungLuas() milik parent
+    @Override
+    public double hitungLuas() {
+        double luasAlas = super.hitungLuas(); // ← pakai hitungLuas() dari parent
+        return 2 * (luasAlas + getPanjang() * tinggi + getLebar() * tinggi);
+    }
+
     public double hitungVolume() {
-        return hitungLuas() * tinggi; // tidak mengulang kode!
+        return super.hitungLuas() * tinggi; // luas alas × tinggi
     }
 }
